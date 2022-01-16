@@ -1,8 +1,9 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 
-function navbarra () {
- return <>
+function Navbarra () {
+ return (
+  <div>
   
   <Navbar bg="light" variant="light">
     <Container>
@@ -18,14 +19,16 @@ function navbarra () {
           aria-label="Search"
         />
         <Button variant="outline-success">Search</Button>
+        
       </Form>
-    </Navbar.Collapse>
-    </Nav>
-    </Container>
-  </Navbar>
+      </Nav>
+      </Container>
+      </Navbar>
+      </Navbar.Collapse>
+      
+</div>  
+ 
+ )}
 
-</>
 
-
-
-export default navbarra;
+export default Navbarra;
