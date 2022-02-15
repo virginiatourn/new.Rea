@@ -1,27 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 import Navbarra from './components/NavBar';
+import {Header} from './components/Header';
+import 'boxicons';
+import {BrowserRouter as Route} from "react-router-dom";
+import {Paginas} from "./components/Paginas.js";
+import {DaraProvider} from "./components/Datas.js";
+
 
 function App() {
   return (
+    <DataProvider>
     <div className="App">
-      <header className="App-header">
-        
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Mi primera Tienda!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <Navbarra/>
+    <Router>
+    <Header/>
+    <Navbarra/>
+     <h1>Mi primer Tienda</h1>
+      <Paginas/>
+    </Router>
     </div>
+    </DataProvider>
   );
 }
 
